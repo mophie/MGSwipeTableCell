@@ -363,8 +363,6 @@ static NSMutableSet * singleSwipePerTable;
 
 @implementation MGSwipeTableCell
 {
-    UITapGestureRecognizer * _tapRecognizer;
-    UIPanGestureRecognizer * _panRecognizer;
     CGPoint _panStartPoint;
     CGFloat _panStartOffset;
     CGFloat _targetOffset;

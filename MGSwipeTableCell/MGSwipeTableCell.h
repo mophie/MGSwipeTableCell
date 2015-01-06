@@ -118,6 +118,9 @@ typedef NS_ENUM(NSInteger, MGSwipeState) {
  * You can create the cells programmatically, using xibs or storyboards
  */
 @interface MGSwipeTableCell : UITableViewCell
+<
+UIGestureRecognizerDelegate
+>
 
 /** optional delegate (not retained) */
 @property (nonatomic, weak) id<MGSwipeTableCellDelegate> delegate;
@@ -147,6 +150,9 @@ typedef NS_ENUM(NSInteger, MGSwipeState) {
 @property (nonatomic, strong) UIColor * swipeBackgroundColor;
 /** Property to read or change the current swipe offset programmatically */
 @property (nonatomic, assign) CGFloat swipeOffset;
+
+@property (nonatomic, readonly) UITapGestureRecognizer *tapRecognizer;
+@property (nonatomic, readonly) UIPanGestureRecognizer *panRecognizer;
 
 /** Utility methods to show or hide swipe buttons programmatically */
 -(void) hideSwipeAnimated: (BOOL) animated;
